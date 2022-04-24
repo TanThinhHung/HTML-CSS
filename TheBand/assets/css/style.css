@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
+1.Từ ngoài vào trong
+2. Từ tren xuống dưới
+3 Từ tổng quan đến khách quan
+*/
+
+
+/*
+*   vị trí của nó
+*   kích thước(width,height)
+*   màu sắc
+*   kiểu dáng(kiểu dáng,hình tròn, vuông)
+*/
+
+.clear {
+    clear: both;
+}
+
+#warpper {
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#header #nav {
+    display: flex;
+}
+
+#nav li {
+    line-height: 46px;
+    position: relative;
+}
+
+#nav li a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 24px;
+    display: block;
+    font-weight: 700;
+}
+
+#nav li:last-child a {
+    position: relative;
+}
+
+#nav>li:last-child>a::after {
+    color: red;
+    content: '';
+    position: absolute;
+    border: 7px solid;
+    border-color: #ffffff transparent transparent transparent;
+    top: 20px;
+    right: 5px;
+}
+
+#nav li a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav li:last-child a:hover::after {
+    border-color: #000 transparent transparent transparent;
+}
+
+.search {
+    line-height: 46px;
+    display: flex;
+    margin-right: 14px;
+}
+
+.searchtext {
+    width: 300px;
+    outline: none;
+    border-right: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+}
+
+.buttonSearch {
+    width: 40px;
+    border-left: none!important;
+    height: 40px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+}
+
+.search i {
+    color: #000;
+    font-size: 20px;
+}
+
+#nav .subnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 4px 4px rgba( 0, 0, 0, 0.2);
+    display: none;
+    min-width: 160px;
+}
+
+.subnav a {
+    color: #000!important;
+    text-transform: capitalize!important;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+.subnav a:hover {
+    color: #fff !important;
+}
+
+.buttonSearch:hover {
+    background-color: #f44336;
+}
+
+.buttonSearch:hover i {
+    color: #ccc;
+}
+
+.banner {
+    margin-top: 46px;
+    position: relative;
+}
+
+.banner #slider {
+    padding-top: 50%;
+    background: url('/assets/img/banner.jpg') top center / cover no-repeat;
+}
+
+.banner #slider img {}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .text-banner {
+    position: absolute;
+    bottom: 47px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner .text-banner h3 {
+    font-size: 24px;
+}
+
+.banner .text-banner p {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    margin: auto;
+    padding: 64px 10px;
+    text-align: center;
+}
+
+.content-section .section-heading {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.content-section .section-title {
+    font-size: 15px;
+    font-style: italic;
+    color: #aaa;
+    margin: 15px 0;
+}
+
+.band .description {
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.band .band-member {
+    padding: 32px 0;
+    display: flex;
+}
+
+.band-member .member {
+    width: 33.3333%;
+    text-align: center;
+    height: 100%;
+}
+
+.band-member .member p {
+    font-size: 15px;
+}
+
+.band-member .member img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+.tour {
+    background-color: #000;
+}
+
+.tour .section-heading,
+.tour .section-title {
+    color: #fff;
+}
+
+.tour .ticket-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.tour .ticket-list li {
+    color: #757575;
+    padding: 10px 16px;
+    font-size: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    background-color: #000000;
+    width: 24px;
+    height: 24px;
+    float: right;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    list-style: 24px;
+    margin-top: -2px;
+}
+
+
+/*Places Tour*/
+
+.tour .placeTour {
+    margin-top: 32px;
+    display: flex;
+    padding-bottom: 32px;
+    justify-content: space-between;
+}
+
+.placeTour .tourItem {
+    width: 32%;
+    height: 100%;
+}
+
+.tourItem .placeImg {
+    width: 100%;
+    height: 185px;
+    display: block;
+}
+
+.tourItem .placeImg:hover {
+    opacity: 0.6;
+}
+
+.tourItem .tourInfor {
+    padding: 16px;
+    font-size: 15px;
+    text-align: left;
+    background: #ffff;
+}
+
+.tourInfor h2 {
+    font-size: 15px;
+}
+
+.tourInfor .tourDate {
+    margin: 15px 0;
+    color: #757575;
+}
+
+.tourInfor .tourDesc {
+    margin: 15px 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.tourInfor .buyTicket {
+    background: #000000;
+    color: #fff;
+    padding: 11px 16px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.buyTicket:hover {
+    background: #ccc;
+    color: #000;
+}
+
+#footer {}
